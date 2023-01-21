@@ -4,5 +4,8 @@
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
     -->
+    <string name="app_logo">Carpe Hora Logo</string>
+    <string name="today">Today</string>
+    <string name="log_now">Log Now</string>
     <string name="hello_world">Hello Square World!</string>
 </resources>
