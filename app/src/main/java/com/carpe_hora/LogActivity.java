@@ -20,6 +20,23 @@ public class LogActivity extends Activity {
         "Sleep", "Work", "Exercise", "Eat", "Socialize", "Relax", "Other"
     };
 
+    public static int actToIndex(String act) {
+        for (int i = 0; i < activities.length; i++) {
+            if (activities[i].equals(act)) {
+                return i;
+            }
+        }
+        
+        return -1;
+    }
+
+    public static String indexToAct(long index) {
+        if (index < 0)
+            return "";
+
+        return activities[(int) index];
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
