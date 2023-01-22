@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".TodayListActivity"
             android:exported="true"/>
         <uses-library
