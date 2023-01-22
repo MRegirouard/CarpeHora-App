@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="124dp"
             android:contentDescription="@string/app_logo"
-            android:src="@drawable/logo_new" />
+            android:src="@drawable/oie_jpg" />
 
         <TextView
             android:id="@+id/textView"
