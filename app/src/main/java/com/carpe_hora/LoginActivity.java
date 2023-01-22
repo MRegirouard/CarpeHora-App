@@ -9,6 +9,12 @@ import android.widget.Toast;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.*;
 import com.google.android.gms.common.api.*;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends Activity {
 
@@ -46,6 +52,20 @@ public class LoginActivity extends Activity {
             if (signInResult.isSuccess()) {
                 GoogleSignInAccount acct = signInResult.getSignInAccount();
                 Toast.makeText(getApplicationContext(), "Welcome " + acct.getGivenName(), Toast.LENGTH_SHORT).show();
+
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+                db.collection("users").document(acct.getId()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (!documentSnapshot.exists()) {
+                            Toast.makeText(getApplicationContext(), "Welcome new user " + acct.getDisplayName(), Toast.LENGTH_SHORT).show();
+                            Map<String, Object> user = new HashMap<>();
+                            user.put("days", new Object[] {});
+                            db.collection("users").document(acct.getId()).set(user);
+                        }
+                    }
+                });
             } else {
                 Toast.makeText(getApplicationContext(), "Sign in failed.", Toast.LENGTH_SHORT).show();
             }
