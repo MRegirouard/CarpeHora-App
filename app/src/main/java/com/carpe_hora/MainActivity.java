@@ -38,5 +38,14 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(MainActivity.this, TodayListActivity.class));
             }
         });
+
+        Button acctBtn = (Button) findViewById(R.id.acct_btn);
+
+        acctBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+        });
     }
 }
