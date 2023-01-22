@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="sleep">#000000</color>
-    <color name="work">#364CF4</color>
-    <color name="exercise">#E6680F</color>
-    <color name="social">#59F436</color>
+    <color name="sleep">#dc2626</color>
+    <color name="work">#ea580c</color>
+    <color name="exercise">#16a34a</color>
+    <color name="social">#c026d3</color>
     <color name="chores">#E436F4</color>
-    <color name="other">#009688</color>
-    <color name="relax">#FFEB3B</color>
-    <color name="eat">#912828</color>
-    <color name="navy_blue">#2E2252</color>
+    <color name="other">#475569</color>
+    <color name="relax">#db2777</color>
+    <color name="eat">#2563eb</color>
+    <color name="navy_blue">#161719</color>
 </resources>
