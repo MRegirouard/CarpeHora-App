@@ -12,10 +12,8 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
         <activity
-            android:name=".TodayActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar" />
-
+            android:name=".TodayListActivity"
+            android:exported="true"/>
         <uses-library
             android:name="com.google.android.wearable"
             android:required="true" />
@@ -39,7 +37,7 @@
         </activity>
         <activity
             android:name=".LogActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
