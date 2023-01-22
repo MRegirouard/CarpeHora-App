@@ -5,21 +5,79 @@ import static java.lang.Integer.parseInt;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.*;
+
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class TodayListActivity extends Activity {
+
+    Button buttons[];
+
+    public static String getDateStr() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime now = LocalDateTime.now();
+        return now.format(dtf);
+    }
+
+    public void syncToDB() {
+        String currentDate = TodayListActivity.getDateStr();
+        Map<String, ArrayList<Integer>> hours = new HashMap<String, ArrayList<Integer>>();
+        ArrayList<Integer> ints = new ArrayList<Integer>();
+
+        for (Button b : buttons) {
+            ints.add(LogActivity.actToIndex(b.getText().toString()));
+        }
+
+        hours.put("hours", ints);
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users").document(MainActivity.acctId)
+                .collection("days").document(currentDate).set(hours);
+    }
+
+    public void updateColor(Button b) {
+        switch (b.getText().toString()) {
+            case "Sleep":
+                b.setBackgroundColor(getResources().getColor(R.color.sleep));
+                break;
+            case "Work":
+                b.setBackgroundColor(getResources().getColor(R.color.work));
+                break;
+            case "Exercise":
+                b.setBackgroundColor(getResources().getColor(R.color.exercise));
+                break;
+            case "Socialize":
+                b.setBackgroundColor(getResources().getColor(R.color.social));
+                break;
+            case "Relax":
+                b.setBackgroundColor(getResources().getColor(R.color.relax));
+                break;
+            case "Eat":
+                b.setBackgroundColor(getResources().getColor(R.color.eat));
+                break;
+            case "Other":
+                b.setBackgroundColor(getResources().getColor(R.color.other));
+                break;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_today_list);
 
-        Button buttons[] = {
+        buttons = new Button[] {
                 findViewById(R.id.am12activity),
                 findViewById(R.id.am1activity),
                 findViewById(R.id.am2activity),
@@ -46,45 +104,48 @@ public class TodayListActivity extends Activity {
                 findViewById(R.id.pm11activity)
         };
 
-        Intent intent = getIntent();
-        // this intent includes a start time, end time, and activity for a new log
-        // for all buttons in TodayListActivity, if the button's id is between the start and end time, set the text of 
-        // the button to the activity and give it a background color
-        if (intent.hasExtra("start") && intent.hasExtra("end") && intent.hasExtra("activity")) {
-            // get start time and end time
-            int startTime = intent.getIntExtra("start", 0);
-            int endTime = intent.getIntExtra("end", 1);
-            // get activity
-            String activity = intent.getStringExtra("activity");
+        String currentDate = getDateStr();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users").document(MainActivity.acctId)
+                .collection("days").document(currentDate)
+                .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful() && task.getResult().exists()) {
+                            System.out.println("From DB Hours:" + task.getResult().get("hours").toString());
+                            List<Long> ints = (List<Long>) task.getResult().get("hours");
+                            int i = 0;
 
-            // set text of buttons between start and end time to activity
-            for (int i = startTime; i < endTime; i++) {
-                buttons[i].setText(activity);
-                switch (activity) {
-                    case "Sleep":
-                        buttons[i].setBackgroundColor(getResources().getColor(R.color.sleep));
-                        break;
-                    case "Work":
-                        buttons[i].setBackgroundColor(getResources().getColor(R.color.work));
-                        break;
-                    case "Exercise":
-                        buttons[i].setBackgroundColor(getResources().getColor(R.color.exercise));
-                        break;
-                    case "Socialize":
-                        buttons[i].setBackgroundColor(getResources().getColor(R.color.social));
-                        break;
-                    case "Relax":
-                        buttons[i].setBackgroundColor(getResources().getColor(R.color.relax));
-                        break;
-                    case "Eat":
-                        buttons[i].setBackgroundColor(getResources().getColor(R.color.eat));
-                        break;
-                    case "Other":
-                        buttons[i].setBackgroundColor(getResources().getColor(R.color.other));
-                        break;
-                }
-            }
-        }
+                            for (Button b : buttons) {
+                                b.setText(LogActivity.indexToAct(ints.get(i)));
+                                updateColor(b);
+                                i++;
+                            }
+                        } else {
+                            System.out.println("Hours doesn't exist :(");
+                        }
+
+                            Intent intent = getIntent();
+                            // this intent includes a start time, end time, and activity for a new log
+                            // for all buttons in TodayListActivity, if the button's id is between the start and end time, set the text of
+                            // the button to the activity and give it a background color
+                            if (intent.hasExtra("start") && intent.hasExtra("end") && intent.hasExtra("activity")) {
+                                // get start time and end time
+                                int startTime = intent.getIntExtra("start", 0);
+                                int endTime = intent.getIntExtra("end", 1);
+                                // get activity
+                                String activity = intent.getStringExtra("activity");
+
+                                // set text of buttons between start and end time to activity
+                                for (int i = startTime; i < endTime; i++) {
+                                    buttons[i].setText(activity);
+                                    updateColor(buttons[i]);
+                                }
+
+                                syncToDB();
+                            }
+                    }
+                });
 
         View.OnClickListener listener = new View.OnClickListener(){
             @Override
