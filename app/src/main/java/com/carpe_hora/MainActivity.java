@@ -29,5 +29,14 @@ public class MainActivity extends Activity {
                     startActivity(new Intent(MainActivity.this, LogActivity.class));
                 }
         });
+
+        Button todayBtn = (Button) findViewById(R.id.button);
+
+        todayBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TodayListActivity.class));
+            }
+        });
     }
 }

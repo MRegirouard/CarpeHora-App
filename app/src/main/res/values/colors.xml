@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sleep">#000000</color>
+    <color name="work">#364CF4</color>
+    <color name="exercise">#E6680F</color>
+    <color name="social">#59F436</color>
+    <color name="chores">#E436F4</color>
+    <color name="other">#009688</color>
+    <color name="relax">#FFEB3B</color>
+    <color name="eat">#912828</color>
+</resources>
