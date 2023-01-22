@@ -27,16 +27,22 @@ public class LogActivity extends Activity {
         binding = binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // get content from intent
+        Intent intent = getIntent();
+        int startTime = intent.getIntExtra("time", 0);
+        System.out.println(startTime);
+
         binding.startNp.setMinValue(0);
         binding.startNp.setMaxValue(timeValues.length - 1);
         binding.startNp.setDisplayedValues(timeValues);
         binding.startNp.setWrapSelectorWheel(false);
+        binding.startNp.setValue(startTime);
 
         binding.endNp.setMinValue(0);
         binding.endNp.setMaxValue(timeValues.length - 1);
         binding.endNp.setDisplayedValues(timeValues);
         binding.endNp.setWrapSelectorWheel(false);
-        binding.endNp.setValue(1);
+        binding.endNp.setValue(startTime + 1);
 
         binding.activityNp.setMinValue(0);
         binding.activityNp.setMaxValue(activities.length - 1);

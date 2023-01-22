@@ -89,9 +89,10 @@ public class TodayListActivity extends Activity {
         View.OnClickListener listener = new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(TodayListActivity.this, LogActivity.class);
-                i.putExtra("time", v.getId());
-                startActivity(i);
+                Intent intent = new Intent(TodayListActivity.this, LogActivity.class);
+                // get the tag of the button that was clicked and parse it to an int
+                intent.putExtra("time", parseInt((String) v.getTag()));
+                startActivity(intent);
             }        
         };
 

@@ -11,14 +11,15 @@
 
         <android.widget.Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="24dp" />
 
         <TextView
             android:id="@+id/today_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/today"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +43,7 @@
                     android:layout_weight="1"
                     android:text="12 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am1"
@@ -52,7 +53,7 @@
                     android:layout_weight="1"
                     android:text="1 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am2"
@@ -62,7 +63,7 @@
                     android:layout_weight="1"
                     android:text="2 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am3"
@@ -72,7 +73,7 @@
                     android:layout_weight="1"
                     android:text="3 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am4"
@@ -82,7 +83,7 @@
                     android:layout_weight="1"
                     android:text="4 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am5"
@@ -92,7 +93,7 @@
                     android:layout_weight="1"
                     android:text="5 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am6"
@@ -102,7 +103,7 @@
                     android:layout_weight="1"
                     android:text="6 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am7"
@@ -112,7 +113,7 @@
                     android:layout_weight="1"
                     android:text="7 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am8"
@@ -122,7 +123,7 @@
                     android:layout_weight="1"
                     android:text="8 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am9"
@@ -132,7 +133,7 @@
                     android:layout_weight="1"
                     android:text="9 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am10"
@@ -142,7 +143,7 @@
                     android:layout_weight="1"
                     android:text="10 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/am11"
@@ -152,7 +153,7 @@
                     android:layout_weight="1"
                     android:text="11 AM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm12"
@@ -162,7 +163,7 @@
                     android:layout_weight="1"
                     android:text="12 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm1"
@@ -172,7 +173,7 @@
                     android:layout_weight="1"
                     android:text="1 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm2"
@@ -182,7 +183,7 @@
                     android:layout_weight="1"
                     android:text="2 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm3"
@@ -192,7 +193,7 @@
                     android:layout_weight="1"
                     android:text="3 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm4"
@@ -202,7 +203,7 @@
                     android:layout_weight="1"
                     android:text="4 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm5"
@@ -212,7 +213,7 @@
                     android:layout_weight="1"
                     android:text="5 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm6"
@@ -222,7 +223,7 @@
                     android:layout_weight="1"
                     android:text="6 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm7"
@@ -232,7 +233,7 @@
                     android:layout_weight="1"
                     android:text="7 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm8"
@@ -242,7 +243,7 @@
                     android:layout_weight="1"
                     android:text="8 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm9"
@@ -252,7 +253,7 @@
                     android:layout_weight="1"
                     android:text="9 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm10"
@@ -262,7 +263,7 @@
                     android:layout_weight="1"
                     android:text="10 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/pm11"
@@ -272,7 +273,7 @@
                     android:layout_weight="1"
                     android:text="11 PM"
                     android:textAlignment="center"
-                    android:textSize="35.8sp" />
+                    android:textSize="24sp" />
 
             </LinearLayout>
 
@@ -286,194 +287,242 @@
                 <Button
                     android:id="@+id/am12activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty"/>
+                    android:tag="0"
+                    android:text="Empty"
+                    android:textSize="10sp" />
 
                 <Button
                     android:id="@+id/am1activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty"/>
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="1"/>
 
                 <Button
                     android:id="@+id/am2activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="2"/>
 
                 <Button
                     android:id="@+id/am3activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="3"/>
 
                 <Button
                     android:id="@+id/am4activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="4"/>
 
                 <Button
                     android:id="@+id/am5activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="5"/>
 
                 <Button
                     android:id="@+id/am6activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="6"/>
 
                 <Button
                     android:id="@+id/am7activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="7"/>
 
                 <Button
                     android:id="@+id/am8activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="8"/>
 
                 <Button
                     android:id="@+id/am9activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="9"/>
 
                 <Button
                     android:id="@+id/am10activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="10"/>
 
                 <Button
                     android:id="@+id/am11activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="11"/>
 
                 <Button
                     android:id="@+id/pm12activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="12"/>
 
                 <Button
                     android:id="@+id/pm1activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="13"/>
 
                 <Button
                     android:id="@+id/pm2activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="14"/>
 
                 <Button
                     android:id="@+id/pm3activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="15"/>
 
                 <Button
                     android:id="@+id/pm4activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="16"/>
 
                 <Button
                     android:id="@+id/pm5activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="17"/>
 
                 <Button
                     android:id="@+id/pm6activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="18"/>
 
                 <Button
                     android:id="@+id/pm7activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="19"/>
 
                 <Button
                     android:id="@+id/pm8activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="20"/>
 
                 <Button
                     android:id="@+id/pm9activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="21"/>
 
                 <Button
                     android:id="@+id/pm10activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="22"/>
 
                 <Button
                     android:id="@+id/pm11activity"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32.5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="Empty" />
+                    android:text="Empty"
+                    android:textSize="10sp" 
+                    android:tag="23"/>
 
             </LinearLayout>
         </LinearLayout>
